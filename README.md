@@ -14,6 +14,7 @@ Também utilizando algumas bibliotecas como:
   - Glide: Carregamento de imagens.
   - Koin: Injeção de dependências.
   - Material: Componentes de UI do Android.
+  - Navigation Components: Para navegação dinâmica com argumentos entre fragmentos e activities.
   
 O aplicativo foi desenvolvido utilizando a linguagem Kotlin e toda as comunições entre as camadas são feitas através de Coroutines. Foi feito um módulo exclusivo para requisições de internet, chamado MSHttp.
 

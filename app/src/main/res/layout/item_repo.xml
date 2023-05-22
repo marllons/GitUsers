@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_sm"
+        android:layout_marginVertical="@dimen/margin_xxxs"
+        app:cardCornerRadius="@dimen/margin_xxs"
+        app:cardElevation="@dimen/margin_xxxs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_xs">
+
+            <TextView
+                android:id="@+id/repo_name_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Repo name" />
+
+            <ImageView
+                android:id="@+id/star_image_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                app:layout_constraintStart_toStartOf="@id/description_text_view"
+                app:layout_constraintTop_toBottomOf="@id/description_text_view"
+                app:srcCompat="@drawable/baseline_star_outline_24" />
+
+            <ImageView
+                android:id="@+id/watch_image_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                app:layout_constraintStart_toEndOf="@id/star_text_view"
+                app:layout_constraintTop_toBottomOf="@id/description_text_view"
+                app:srcCompat="@drawable/baseline_remove_red_eye_24" />
+
+            <ImageView
+                android:id="@+id/fork_image_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                android:text="@string/url"
+                app:layout_constraintStart_toEndOf="@id/watch_text_view"
+                app:layout_constraintTop_toBottomOf="@id/description_text_view"
+                app:srcCompat="@drawable/baseline_fork_right_24" />
+
+            <TextView
+                android:id="@+id/description_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:maxLines="3"
+                android:lines="3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/repo_name_text_view"
+                tools:text="description of repo name" />
+
+            <TextView
+                android:id="@+id/fork_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                app:layout_constraintStart_toEndOf="@id/fork_image_view"
+                app:layout_constraintTop_toBottomOf="@id/description_text_view"
+                tools:text="000" />
+
+            <TextView
+                android:id="@+id/star_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                app:layout_constraintStart_toEndOf="@id/star_image_view"
+                app:layout_constraintTop_toBottomOf="@id/description_text_view"
+                tools:text="000" />
+
+            <TextView
+                android:id="@+id/watch_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                app:layout_constraintStart_toEndOf="@id/watch_image_view"
+                app:layout_constraintTop_toBottomOf="@id/description_text_view"
+                tools:text="000" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

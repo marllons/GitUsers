@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presenter.ui.fragment.DetailsFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/margin_sm"
+        android:layout_marginVertical="@dimen/margin_sm"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/margin_xxs"
+        app:cardElevation="@dimen/margin_xxxs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/details_user_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/avatar_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="@dimen/margin_sm"
+                    android:layout_marginTop="@dimen/margin_sm"
+                    android:layout_marginEnd="@dimen/margin_sm"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintEnd_toStartOf="@id/guideline3"
+                    app:layout_constraintStart_toStartOf="@id/guideline2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/name_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:layout_marginTop="@dimen/margin_sm"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:maxLines="2"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/avatar_image_view"
+                    tools:text="Marllon Sóstenes" />
+
+                <TextView
+                    android:id="@+id/username_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:layout_marginTop="@dimen/margin_xs"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/name_text_view"
+                    tools:text="marllons" />
+
+                <ImageView
+                    android:id="@+id/followers_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/margin_xs"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/followers_text_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/followers_text_view"
+                    app:srcCompat="@drawable/baseline_person_24" />
+
+                <TextView
+                    android:id="@+id/followers_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:layout_marginTop="@dimen/margin_xs"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/followers_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/username_text_view"
+                    tools:text="23,5k followers / 11k following" />
+
+                <ImageView
+                    android:id="@+id/company_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/company_text_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/company_text_view"
+                    app:srcCompat="@drawable/baseline_home_work_24" />
+
+                <TextView
+                    android:id="@+id/company_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:layout_marginTop="@dimen/margin_xs"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/company_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/followers_text_view"
+                    tools:text="companyapp" />
+
+                <ImageView
+                    android:id="@+id/location_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/location_text_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/location_text_view"
+                    app:srcCompat="@drawable/baseline_pin_drop_24" />
+
+                <TextView
+                    android:id="@+id/location_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:layout_marginTop="@dimen/margin_xs"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/location_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/company_text_view"
+                    tools:text="Brazil" />
+
+                <ImageView
+                    android:id="@+id/email_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/email_text_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/email_text_view"
+                    app:srcCompat="@drawable/baseline_email_24" />
+
+                <TextView
+                    android:id="@+id/email_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:layout_marginTop="@dimen/margin_xs"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/location_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/location_text_view"
+                    tools:text="marllons@marllons.com" />
+
+                <ImageView
+                    android:id="@+id/links_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/links_text_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/links_text_view"
+                    app:srcCompat="@drawable/baseline_insert_link_24" />
+
+                <TextView
+                    android:id="@+id/links_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:layout_marginTop="@dimen/margin_xs"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/location_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/email_text_view"
+                    tools:text="https://marllons.dev" />
+
+                <ImageView
+                    android:id="@+id/twitter_image_view"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/margin_xs"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/twitter_text_view"
+                    app:layout_constraintEnd_toEndOf="@+id/links_image_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/twitter_text_view"
+                    app:srcCompat="@drawable/twitter24"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/twitter_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:layout_marginTop="@dimen/margin_xs"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/twitter_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/links_text_view"
+                    tools:text="marllons" />
+
+                <ImageView
+                    android:id="@+id/repo_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/repo_text_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/repo_text_view"
+                    app:srcCompat="@drawable/baseline_book_24" />
+
+                <TextView
+                    android:id="@+id/repo_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:layout_marginTop="@dimen/margin_xs"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/repo_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/twitter_text_view"
+                    tools:text="33 repos" />
+
+                <ImageView
+                    android:id="@+id/gists_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="@+id/gists_text_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/gists_text_view"
+                    app:srcCompat="@drawable/baseline_note_alt_24" />
+
+                <TextView
+                    android:id="@+id/gists_text_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_xs"
+                    android:layout_marginTop="@dimen/margin_xs"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/gists_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/repo_text_view"
+                    tools:text="10 gists" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".20" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".80" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_sm"
+                    android:text="@string/see_all_repos"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gists_text_view" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <include
+        android:id="@+id/layout_progress"
+        layout="@layout/layout_progress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/layout_error"
+        layout="@layout/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

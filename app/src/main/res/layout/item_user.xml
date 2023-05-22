@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_sm"
+        android:layout_marginVertical="@dimen/margin_xxxs"
+        app:cardCornerRadius="@dimen/margin_xxs"
+        app:cardElevation="@dimen/margin_xxxs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_xs">
+
+            <ImageView
+                android:id="@+id/image_view_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/username_text_view"
+                android:layout_width="0dp"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image_view_avatar"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="marllons" />
+
+            <ImageView
+                android:id="@+id/github_url_label_text_view"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                android:text="@string/url"
+                app:srcCompat="@drawable/github_mark_96"
+                app:layout_constraintStart_toEndOf="@id/image_view_avatar"
+                app:layout_constraintTop_toBottomOf="@id/username_text_view" />
+
+            <TextView
+                android:id="@+id/github_url_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/github_url_label_text_view"
+                app:layout_constraintTop_toBottomOf="@id/username_text_view"
+                tools:text="https://github.com/marllons" />
+
+            <TextView
+                android:id="@+id/id_label_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                android:text="@string/id"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/image_view_avatar"
+                app:layout_constraintTop_toBottomOf="@id/github_url_label_text_view" />
+
+            <TextView
+                android:id="@+id/id_text_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/id_label_text_view"
+                app:layout_constraintTop_toBottomOf="@id/github_url_text_view"
+                tools:text="000" />
+
+            <TextView
+                android:id="@+id/type_text_view"
+                android:layout_width="0dp"
+                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_xxxs"
+                android:layout_marginVertical="@dimen/margin_xxxs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image_view_avatar"
+                app:layout_constraintTop_toBottomOf="@id/id_text_view"
+                tools:text="admin" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

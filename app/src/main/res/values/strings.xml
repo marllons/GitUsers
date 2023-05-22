@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">GitUsers</string>
+    <string name="username">Username:</string>
+    <string name="url">Url:</string>
+    <string name="id">User id:</string>
+    <string name="type">Type:</string>
+    <string name="no_data">No data!</string>
+    <string name="no_description">No description available.</string>
+    <string name="undefined">Undefined</string>
+    <string name="search_user">Search user</string>
+    <string name="see_all_repos">See all repos</string>
+    <string name="followers_and_following">%s followers / %s following</string>
+    <string name="repos">%s public repos</string>
+    <string name="gists">%s public gists</string>
+    <string name="search_repo_name">Search repo name</string>
+</resources>

@@ -2,11 +2,11 @@
 
 O aplicativo “GitUsers” é uma lista de usuários do github, onde você pode listar usuários para ter acesso ao repositório público do mesmo.
 
-O aplicativo consume a API de do github ([http://www.api.github.com/](https://api.github.com)) e foi desenvolvido seguindo os princípios do MVVM + Clean Architecture, separando em camadas de `Data`, `Domain` e `Presenter`, sendo este ultimo dividido entre `View e ViewModel`.
+O aplicativo consume a API do github ([http://www.api.github.com/](https://api.github.com)) e foi desenvolvido seguindo os princípios do MVVM + Clean Architecture, separando em camadas de `Data`, `Domain` e `Presenter`, sendo este ultimo dividido entre `View e ViewModel`.
 
 - A camada de `Data` utiliza as bibliotecas Retrofit, para consumir a API externa.
 
-- A camada de `Domain` foi implementado os `UseCases` com as regras que acessam a camada `Data` em busca dos dados esternos. Realizando as tarefas de consulta de dados utilizando Coroutines, na thread IO e retornar os dados para thread MAIN com mapeamento dos tipos de erros.
+- A camada de `Domain` foi implementado os `UseCases` com as regras que acessam a camada `Data` em busca dos dados externos. Realizando as tarefas de consulta de dados utilizando Coroutines, na thread IO e retornar os dados para thread MAIN com mapeamento dos tipos de erros.
 
 - A camada de `Presenter` é responsável por toda a parte visual do aplicativo, como Activities, Fragments, ViewModels e etc. Foi implementado seguindo os padrões de programação reativa (LiveData e ViewState).
 Também utilizando algumas bibliotecas como:
